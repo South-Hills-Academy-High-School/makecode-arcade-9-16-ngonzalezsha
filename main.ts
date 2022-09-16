@@ -125,8 +125,7 @@ game.onUpdate(function () {
 })
 game.onUpdate(function () {
     for (let value of snakebody) {
-        let list: Sprite[] = []
-        if (!(value) && snakebody.overlapsWith(list[0])) {
+        if (!(value == snakebody[0]) && snakehead.overlapsWith(value)) {
             game.over(false)
         }
     }
